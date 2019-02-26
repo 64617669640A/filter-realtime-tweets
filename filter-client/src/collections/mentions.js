@@ -17,7 +17,7 @@ var Mentions = Backbone.Collection.extend({
     }.bind(this));
   },
   'addMention': function addMention (mention) {
-    this.add(mention);
+    this.unshift(mention);
   }
 });
 

@@ -25,21 +25,16 @@ var formatter = function(tweet) {
     'coordinates': tweet.coordinates
   }
 }
-
-var stream = client.stream('statuses/filter', {track: 'javascript'});
-stream.on('data', function(tweet) {
-  io.sockets.on('connection', function (socket) {
-    if (tweet) {
-      console.log(formatter(tweet))
-      socket.emit('message', formatter(tweet));
-    }
-  })
+io.sockets.on('connection', function (socket) {
+  var stream = client.stream('statuses/filter', {track: 'javascript'});
+    stream.on('data', function(tweet) {
+      if (tweet) {
+        console.log(formatter(tweet))
+        socket.emit('message', formatter(tweet));
+      }
+  });
 });
 
-stream.on('error', function(error) {
-  throw error;
-});
- 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
