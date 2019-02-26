@@ -8,15 +8,10 @@ var Mention = require('./components/mention');
 
 module.exports = Backbone.View.extend({
   'el': '#app',
-  'events': {
-    'click .add-one': 'addOne'
-  },
-  'addOne': function addOne (e) {
-    e.preventDefault();
-  },
   'template': template(TwitterRealTime),
   'render': function render () {
     this.$el.html(this.template());
+    //console.log(this.collection.toJSON());
 
     var mention = new Mention({
       'collection': this.collection

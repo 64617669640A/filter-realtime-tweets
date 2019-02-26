@@ -19,6 +19,7 @@
     "moment": "^2.23.0",
     "save": "^2.3.3",
     "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
     "three": "^0.100.0",
     "underscore": "1.9.1"
   },
