@@ -1,0 +1,31 @@
+Arguments: 
+  /Users/davidle/.nvm/versions/node/v11.4.0/bin/node /usr/local/bin/yarn start
+
+PATH: 
+  /Users/davidle/.nvm/versions/node/v11.4.0/bin:/usr/local/sbin:/Users/davidle/Desktop/filter-realtime-tweets/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Users/davidle/Library/Android/sdk/tools:/Users/davidle/Library/Android/sdk/tools/bin:/Users/davidle/Library/Android/sdk/platform-tools:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  11.4.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "/Users/davidle/Desktop/filter-realtime-tweets"
+      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:109:13

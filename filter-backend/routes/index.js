@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Twitter = require('twitter');
-var io = require('socket.io')(3002);
+var io = require('socket.io')(5002);
 
 var client = new Twitter({
   consumer_key: 'tZoYtfCixrzcTAnXu6Hnw208L',
@@ -31,7 +31,12 @@ io.sockets.on('connection', function (socket) {
       if (tweet) {
         console.log(formatter(tweet))
         socket.emit('message', formatter(tweet));
-      }
+    }
+    
+    stream.on('error', function(error) {
+      throw error;
+    });
+    
   });
 });
 

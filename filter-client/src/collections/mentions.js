@@ -9,7 +9,7 @@ var Mention = require('../models/mentions.js');
 var Mentions = Backbone.Collection.extend({
   'model': Mention,
   'initialize': function initialize () {
-    var socket = io.connect('http://localhost:3002');
+    var socket = io.connect('http://localhost:5002');
 
     socket.on('message', function receivedTweet (tweet) {
       console.log(tweet);
